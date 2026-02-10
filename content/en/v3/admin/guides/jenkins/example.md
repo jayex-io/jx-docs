@@ -8,12 +8,12 @@ aliases:
   - /v3/guides/infra/jenkins/example
 ---
 
-This is an example on building a JX3 Google/GSM environment from scratch which includes a Jenkins server and the import of a pipeline. It will utilize DNS (`jx3rocks.com`), TLS, Let's Encrypt certificates,  and additional Jenkins plugins and installer resources. It is inteded for an audience already familiar with Jenkins X operability and focuses on an example of actual commands required to build and operate the  environment. Additional information regarding using Google as the provider for this example can be found under [Google Cloud Platform Prequisites](/v3/admin/guides/tls_dns/#prerequisites).
+This is an example on building a JX3 Google/GSM environment from scratch which includes a Jenkins server and the import of a pipeline. It will utilize DNS (`jx3rocks.com`), TLS, Let's Encrypt certificates,  and additional Jenkins plugins and installer resources. It is inteded for an audience already familiar with JayeX operability and focuses on an example of actual commands required to build and operate the  environment. Additional information regarding using Google as the provider for this example can be found under [Google Cloud Platform Prequisites](/v3/admin/guides/tls_dns/#prerequisites).
 > 💡 This doc has been designed to build the Jenkins server under the Google cloud platform. [The Jenkins server configuration steps](/v3/admin/guides/jenkins/example/#initialize-jenkins-server-configuration) have also been tested under <b>Azure</b> and <b>Amazon</b> cloud environments.
 >
 
 ### Initialize the Infra and Cluster Repos
-Using a command-line based approach, the example employs a process modeled after the doc [Setup Jenkins X on Google Cloud with GKE](/v3/admin/platforms/google), and will use Google Secret Manger. It requires installation of [Git](https://git-scm.com/downloads) and [Hub](https://hub.github.com/) command line tools. 
+Using a command-line based approach, the example employs a process modeled after the doc [Setup JayeX on Google Cloud with GKE](/v3/admin/platforms/google), and will use Google Secret Manger. It requires installation of [Git](https://git-scm.com/downloads) and [Hub](https://hub.github.com/) command line tools. 
 
 The following are the values used for the creation of the Infra and Cluster repos:
 ```
@@ -88,7 +88,7 @@ controller:
 
 ```
 ### Initialize Jenkins server configuration
-`jx gitops` commands are used to create the Jenkins server configuration. More information can be found under [Adding Jenkins Server into Jenkins X](/v3/admin/guides/jenkins/getting-started/#adding-jenkins-servers-into-jenkins-x). The example uses the following command sequence:
+`jx gitops` commands are used to create the Jenkins server configuration. More information can be found under [Adding Jenkins Server into JayeX](/v3/admin/guides/jenkins/getting-started/#adding-jenkins-servers-into-jenkins-x). The example uses the following command sequence:
 ```bash
 cd $JX3HOME/jx3-gke-gsm                             ## cluster repo root
 jx gitops jenkins add --name jx-jenkins             ## add Jenkins
@@ -143,7 +143,6 @@ kubectl get cert -n jx
 NAME                     READY   SECRET                   AGE
 tls-web-jx3rocks-com-s   True    tls-web-jx3rocks-com-s   39m
 ```
-You can also use [Octant](http://127.0.0.1:7777/#/overview/namespace/jx/custom-resources) to check certificate status.
 
 Enabling the production certificate will require updates to both infra `(jx-terraform-gke)` and cluster `(jx3-gke-gsm)` repos. The commands to create the prod certificate are:
 ```bash
@@ -177,8 +176,7 @@ NAME                     READY   SECRET                   AGE
 tls-web-jx3rocks-com-p   True    tls-web-jx3rocks-com-p   39m
 tls-web-jx3rocks-com-s   True    tls-web-jx3rocks-com-s   86m
 ```
-You can also use [Octant](http://127.0.0.1:7777/#/overview/namespace/jx/custom-resources) to check the production certificate.
-![Octant Display](/images/v3/octant_display.png)
+
 ### Sign on to Jenkins
 After production certificates become ready, access to the Jenkins site: https://jenkins.web.jx3rocks.com is now available. The site has been configure with an `admin` user id and to obtain the `admin` user password the following commands are used:
 ```bash

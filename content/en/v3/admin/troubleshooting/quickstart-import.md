@@ -6,7 +6,7 @@ description: How to diagnose and fix issues with quickstart and/or import
 weight: 500
 ---
 
-After a successful installation of Jenkins X, the first thing to do is to either create a quickstart or import an existing repository into Jenkins X.
+After a successful installation of JayeX, the first thing to do is to either create a quickstart or import an existing repository into JayeX.
 They are both very similar, so the steps mentioned here can be applied for both.
 
 Import/Quickstart involves the following steps:
@@ -32,7 +32,7 @@ jx looks at a few places for the credentials:
 
 - `--git-token` and `--git-username`
 - ~/.git-credentials
-- [~/git/credentials](https://jenkins-x.io/v3/develop/faq/using/#how-do-i-stop-jx-asking-for-git-credentials)
+- [~/git/credentials](https://jayex.io/v3/develop/faq/using/#how-do-i-stop-jx-asking-for-git-credentials)
 
 Passing the args for every import is cumbersome and error prone, hence it's better to create the git credentials file.
 
@@ -103,7 +103,7 @@ The files that are changed include:
 - config-root/namespaces/jx/lighthouse/lighthouse-webhooks-deploy.yaml
 - config-root/namespaces/jx/source-repositories/owner-repo.yaml
 
-If the second commit is not created, it means the verify job failed (use the `dashboard` or `octant ui`).
+If the second commit is not created, it means the verify job failed (use the `dashboard`).
 Check the logs of the job which should give you some hints.
 
 If you check the `.lighthouse/jenkins-x/pullrequest.yaml` file, you will see that the PR runs the command make-pr, which actually runs `jx gitops apply --pull-request` which invokes the `pr-regen` target in the `versionStream/src/Makefile.mk` of the cluster git repository.
@@ -164,4 +164,4 @@ error: failed to wait for repository to be setup in lighthouse: failed to find t
 
 check the logs from the release pipeline to see what is the issue.
 
-If everything works, then your repository has been successfully imported into Jenkins X!
+If everything works, then your repository has been successfully imported into JayeX!

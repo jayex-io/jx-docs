@@ -9,7 +9,7 @@ aliases:
   - /v3/admin/guides/secrets
 ---
 
-Jenkins X 3.x uses [Kubernetes External Secrets](https://github.com/external-secrets/kubernetes-external-secrets) to manage populating secrets from your underlying secret store such as:
+JayeX 3.x uses [Kubernetes External Secrets](https://github.com/external-secrets/kubernetes-external-secrets) to manage populating secrets from your underlying secret store such as:
 
 * Alibaba Cloud KMS Secret Manager
 * Amazon Secret Manager
@@ -61,8 +61,6 @@ jx secret verify
 
 This will list all of the `ExternalSecret` resources and visualise which ones are populated correctly.
 
-You can also use [UI](/v3/develop/ui/octant/) via `jx ui` and navigate to the [Secrets View](http://127.0.0.1:7777/#/ojx/secrets)
-
 ## Vault
 
 If you are using Vault as your back end for [Kubernetes External Secrets](https://github.com/external-secrets/kubernetes-external-secrets) then before you try any of the following commands to populate secrets you need to make sure your termminal can access Vault.
@@ -77,7 +75,7 @@ You should then be able to run the following `jx secret edit` command. You can a
 
 ## Edit Secrets
 
-To edit the Secrets use the [jx secret edit](https://jenkins-x.io/v3/develop/reference/jx/secret/edit/) command:
+To edit the Secrets use the [jx secret edit](https://jayex.io/v3/develop/reference/jx/secret/edit/) command:
 
 ```bash
 jx secret edit
@@ -134,7 +132,7 @@ jx secret verify
 
 Its quite common to need to replicate the same Secrets across namespaces. For example [Image Pull Secrets](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) to pull images from container registries which may need to be used in dev, staging and production.
 
-The Jenkins X boot job does this automatically for any secret labelled with `secret.jenkins-x.io/replica-source=true` using the [jx secret replicate](https://github.com/jenkins-x/jx-secret/blob/master/docs/cmd/jx-secret_replicate.md) command:
+The JayeX boot job does this automatically for any secret labelled with `secret.jenkins-x.io/replica-source=true` using the [jx secret replicate](https://github.com/jenkins-x/jx-secret/blob/master/docs/cmd/jx-secret_replicate.md) command:
 
 ```bash 
 jx secret replicate --selector secret.jenkins-x.io/replica-source=true

@@ -2,13 +2,13 @@
 title: Extending
 linktitle: Extending
 type: docs
-description: How to extend Jenkins X 3.x 
+description: How to extend JayeX 3.x 
 weight: 500
 aliases: 
     - /v3/about/extending/
 ---
 
-Jenkins X has a number of extension points you can use to extend the CI/CD platform to suit your needs:
+JayeX has a number of extension points you can use to extend the CI/CD platform to suit your needs:
 
 ## Charts
 
@@ -71,7 +71,7 @@ jx gitops help
 
 With version 3.x we default to using [Pipeline Catalogs](/v3/develop/pipelines/) containing Tekton resources to define CI/CD pipelines.
 
-e.g. the default CI/CD pipelines from the [default Jenkins X Pipeline Catalog](https://github.com/jenkins-x/jx3-pipeline-catalog/tree/master/packs) define tekton pipelines in the `.lighthouse/jenkins-x` folder.
+e.g. the default CI/CD pipelines from the [default JayeX Pipeline Catalog](https://github.com/jenkins-x/jx3-pipeline-catalog/tree/master/packs) define tekton pipelines in the `.lighthouse/jenkins-x` folder.
 
 Inside each repository there is now a trigger file called `triggers.yaml` defined at`.lighthouse/jenkins-x/triggers.yaml` to define the [lighthouse](https://github.com/jenkins-x/lighthouse) `presubmits` and `postsubmits` (i.e. Pull Request pipelines and release pipelines).
 
@@ -85,7 +85,7 @@ The `pipeline catalog` contains default triggers, tekton pipelines and associate
 
 The pipeline catalog is used to default the triggers, pipelines and other files for [new projects](/v3/develop/create-project/) when you import or create new quickstarts.
 
-You can browse the [default Jenkins X Pipeline Catalog here](https://github.com/jenkins-x/jx3-pipeline-catalog/tree/master/packs).
+You can browse the [default JayeX Pipeline Catalog here](https://github.com/jenkins-x/jx3-pipeline-catalog/tree/master/packs).
 
 If you want you can fork the [jenkins-x/jx3-pipeline-catalog](https://github.com/jenkins-x/jx3-pipeline-catalog) repository and make your modifications to add/remove folders for different languages or modify the pipelines and associated files.
 
@@ -140,7 +140,7 @@ To update your pipeline catalog with every cluster upgrade, add these steps to y
   name: promote-release
 ```
 
-This will open a PR on the pipeline catalog repo if updates are available. If Jenkins X manages the pipeline catalog repo, the PRs will be automatically merged.
+This will open a PR on the pipeline catalog repo if updates are available. If JayeX manages the pipeline catalog repo, the PRs will be automatically merged.
 
 ## QuickStarts
 
@@ -175,12 +175,3 @@ spec:
     excludes:
     - ".*/node.*"
 ```
-
-## Octant
-
-
-Our preferred UI for Kubernetes, Tekton and Jenkins X is [octant](/v3/develop/ui/octant) as its easy to install/run and has fined grained RBAC and security without the hassle of setting up TLS, DNS and SSO on every cluster.
-
-One of the awesome features of [Octant](https://octant.dev/) is it supports plugins so that anyone can build a plugin to extend the UI. We've created the [octant-jx](https://github.com/jenkins-x/octant-jx) plugin to extend [Octant](https://octant.dev/) with the Jenkins X capabilities of environments, pipelines, source repositories and so forth. 
-
-If you wish to extend [Octant](https://octant.dev/) further either contribute to the [octant-jx](https://github.com/jenkins-x/octant-jx) plugin or create your own!

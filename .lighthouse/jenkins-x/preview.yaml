@@ -1,9 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  annotations:
-    lighthouse.jenkins-x.io/prependStepsURL: https://raw.githubusercontent.com/jenkins-x/jx3-pipeline-catalog/6587692624f71fe48d4d183d510a5d8d4a30fb29/tasks/git-clone/git-clone-pr.yaml
-  name: pullrequest
+  name: preview
 spec:
   pipelineSpec:
     tasks:
@@ -13,7 +11,6 @@ spec:
           metadata: {}
           stepTemplate:
             name: ""
-            resources: {}
             workingDir: /workspace/source
             resources:
               requests: {}
@@ -24,6 +21,9 @@ spec:
                     name: ingress-config
                     key: domain
           steps:
+            - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+              name: ""
+              resources: {}
             - image: klakegg/hugo:0.101.0-ext-alpine
               name: git-submodules
               script: |
@@ -66,7 +66,7 @@ spec:
                 #!/usr/bin/env sh
                 jx gitops variables
 
-            - image: gcr.io/kaniko-project/executor:debug-v1.3.0
+            - image: gcr.io/kaniko-project/executor:v1.9.1-debug
               name: build-and-push-image
               script: |
                 #!/busybox/sh
