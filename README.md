@@ -4,9 +4,9 @@
 
 <a id="markdown-jenkins-x-docs" name="jenkins-x-docs"></a>
 
-This repository contains the source files for [jenkins-x.io](http://jenkins-x.io/)
+This repository contains the source files for [jayex.io](http://jayex.io/)
 
-**NOTE:** Please browse these docs on [jenkins-x.io](http://jenkins-x.io/). Not all links work when browsing the Markdown files inside this repository.
+**NOTE:** Please browse these docs on [jayex.io](http://jayex.io/). Not all links work when browsing the Markdown files inside this repository.
 
 ---
 
