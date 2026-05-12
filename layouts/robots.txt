@@ -3,3 +3,5 @@ User-agent: *
 Disallow: /docs/
 
 Sitemap: {{ "sitemap.xml" | absLangURL }}
+
+# Algolia-Crawler-Verif: BF1B2D59220A6FB7
