@@ -14,6 +14,7 @@ It is highly desireable to use the latest and greatest version of golang for Jay
 To update golang version in JayeX follow these steps
 
 - Open an issue in jx repository announcing the upgrade.
+- Upgrade the goreleaser image - https://github.com/jenkins-x/jx-goreleaser-image
 - Change the go version in the pipeline catalog repository.
   See this [PR](https://github.com/jenkins-x/jx3-pipeline-catalog/pull/1162) for which files to change.
 - Update the catalog version in the version stream
