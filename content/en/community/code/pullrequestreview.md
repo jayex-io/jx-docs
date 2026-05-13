@@ -64,7 +64,7 @@ be detrimental (rather than requiring the author to prove or assert benefit in a
 If, as a PR approver, you feel that a PR is detrimental to JayeX you should:
 
 1) Place the PR on hold using the `/hold` command, with the comment "I want to discuss whether this PR is beneficial or
-not before approving. I'll start a discussion in the #jenkins-x-dev channel shortly to discuss my concerns."
+not before approving. I'll start a discussion in the #jayex-dev channel shortly to discuss my concerns."
 2) Once you have started a discussion, add a comment with a PR with a link to the discussion
 3) Once you have have reached mutual agreement update the PR:
    * Summarize the discussion on the PR
@@ -129,7 +129,7 @@ bad behaviors and a PR author or another community member should call out an app
   use your debugger. If you are still struggling then ask the author on slack and explain why you can't understand it. The
   author should then update the PR either with some comments or different code. You should also post a short summary back
   on to the PR, focusing on the "why" - in other words why were you confused and why did the change fix it.
-* Discussions about a change. If you need to discuss a change, then use #jenkins-x-dev on slack or do a call
+* Discussions about a change. If you need to discuss a change, then use #jayex-dev on slack or do a call
   (advertising it on slack ideally). Once you've got a conclusion make a quick note of that on the PR.
 * Tangents. There are many problems in the codebase, but don't be tempted to try to solve all of them in a review. Focus
   on what problems this PR will cause.

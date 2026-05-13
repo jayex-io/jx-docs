@@ -22,8 +22,8 @@ We'd love to talk with you about JayeX and are happy to help if you have any que
 Talk to us on our slack channels, which are part of the Kubernetes slack.
 Join Kubernetes slack [here](https://slack.k8s.io/) and find us on our channels:
 
-- [\#jenkins-x-user](https://kubernetes.slack.com/messages/C9MBGQJRH) for users of JayeX
-- [\#jenkins-x-dev](https://kubernetes.slack.com/messages/C9LTHT2BB) for developers of JayeX
+- [\#jayex-user](https://kubernetes.slack.com/messages/C9MBGQJRH) for users of JayeX
+- [\#jayex-dev](https://kubernetes.slack.com/messages/C9LTHT2BB) for developers of JayeX
 
 ### Meetings
 

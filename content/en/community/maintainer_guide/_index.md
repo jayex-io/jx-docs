@@ -41,7 +41,7 @@ It's expected that a core maintainer will make JayeX more stable and feature pac
 ### Community effort
 
 - Uphold the [CDF Code of Conduct](https://github.com/cdfoundation/.github/blob/main/CODE_OF_CONDUCT.md)
-- Answer questions on slack (jenkins-x-user and jenkins-x-dev)
+- Answer questions on slack (jayex-user and jayex-dev)
 - Try to attend all community office hour meetings
 - Attend the CDF TOC meetings from time to time
 - Join one of the CDF SIGs, and give a short status update during the office hours.
