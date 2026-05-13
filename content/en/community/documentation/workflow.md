@@ -130,7 +130,7 @@ There are a number of automated checks that will run on your PR:
 
 The final part of all of this, is letting others review your work and provide feedback. As a rule of thumb, the conversation should happen on the PR, but sometimes things will be sorted out via Slack or a video call.
 
-Sometimes it may take a few days for a review to happen. If you feel it's an urgent change, jump on the [community slack channel](https://jayex.io/community/#slack) `#jenkins-x-user` and ask for someone to review your PR.
+Sometimes it may take a few days for a review to happen. If you feel it's an urgent change, jump on the [community slack channel](https://jayex.io/community/#slack) `#jayex-user` and ask for someone to review your PR.
 
 Once the review is done, your changes will be merged into the master branch, and the site will be updated.
 

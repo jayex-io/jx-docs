@@ -32,7 +32,7 @@ It's a great way for us to save money on builds while ensuring you can give them
 
 ## How to setup spot instances with your terraform module
 
-Work has been completed on [AWS](https://github.com/jenkins-x/terraform-aws-eks-jx/pull/76) and [Azure](https://github.com/jenkins-x-terraform/terraform-jx-Azure/pull/23), if someone would like to implement this on GCP (or another cloud provider), please join us in #jenkins-x-dev in slack.
+Work has been completed on [AWS](https://github.com/jenkins-x/terraform-aws-eks-jx/pull/76) and [Azure](https://github.com/jenkins-x-terraform/terraform-jx-Azure/pull/23), if someone would like to implement this on GCP (or another cloud provider), please join us in #jayex-dev in slack.
 
 ### Azure
 
