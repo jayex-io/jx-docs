@@ -10,6 +10,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/jenkins-x/jx-project:latest'
+  env:
+    JX_LOG_LEVEL: debug
   args:
   - pullrequest
   - --batch-mode
