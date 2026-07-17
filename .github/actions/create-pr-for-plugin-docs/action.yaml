@@ -21,6 +21,8 @@ runs:
   - "Created by this action run: https://github.com/jenkins-x/jx-docs/actions/runs/${{ inputs.run_id }}"
   - --label
   - updatebot
+  - --label
+  - ok-to-test
   - --push
   - --git-token
   - ${{ inputs.token }}
