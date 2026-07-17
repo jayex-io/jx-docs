@@ -33,6 +33,7 @@ Creates a Pull Request to upgrade the environment git repository from the versio
       --labels strings              a list of labels to apply to the PR (default [jx-boot-upgrade])
       --pull-request-body string    the PR body
       --pull-request-title string   the PR title (default "chore: upgrade the cluster git repository from the version stream")
+      --reuse-pull-request          should we reuse existing pull request
   -s, --strategy string             the 'kpt' strategy to use. To see available strategies type 'kpt pkg update --help'. Typical values are: resource-merge, fast-forward, alpha-git-patch, force-delete-replace
 ```
 

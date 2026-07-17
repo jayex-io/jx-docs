@@ -43,7 +43,6 @@ Edits the local 'jx-requirements.yml file
       --git-name string              the name of the git repository
       --git-server string            the git server host such as https://github.com or https://gitlab.com
   -h, --help                         help for edit
-      --kaniko-sa string             configures the Kaniko service account name
       --project string               configures the Google Project ID
   -p, --provider string              configures the kubernetes provider
   -r, --region string                configures the cloud region
