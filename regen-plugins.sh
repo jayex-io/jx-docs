@@ -32,8 +32,8 @@ git status
 
 if git diff --staged  --quiet
 then
-    echo "::set-output name=changed::false"
+    echo "changed=false" >> $GITHUB_OUTPUT
 else
     git checkout -b regen-plugin-docs-$(date +%Y%m%d-%H%M%S)
-    echo "::set-output name=changed::true"
+    echo "changed=true" >> $GITHUB_OUTPUT
 fi

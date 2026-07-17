@@ -15,12 +15,12 @@ jobs:
         name: Regenerate the plugins docs
         id: regenerate
         env:
-          GIT_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           entrypoint: ./regen-plugins.sh
       - name: Create pr for regenerated plugin docs
         if: ${{ steps.regenerate.outputs.changed == 'true' }}
         uses: ./.github/actions/create-pr-for-plugin-docs
         with:
-          token: ${{ secrets.GIT_BOT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           run_id: ${{ github.run_id }}
