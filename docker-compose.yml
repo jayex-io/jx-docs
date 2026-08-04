@@ -1,7 +1,7 @@
 version: "2"
 services:
   server:
-    image: klakegg/hugo:0.101.0-ext-alpine
+    image: ghcr.io/gohugoio/hugo:v0.164.0
     command:
       ["server", "-s", "/src", "-D", "--bind", "0.0.0.0", "--ignoreCache"]
     volumes:

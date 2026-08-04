@@ -7,7 +7,7 @@ enableRobotsTXT = true
 ignoreErrors = ["error-remote-getjson"]
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
+theme = ["github.com/google/docsy/theme"]
 
 # Setting this to false to keep builds from breaking: https://github.com/gohugoio/hugo/issues/6035
 # Will give values to .Lastmod etc.
@@ -28,7 +28,7 @@ enableMissingTranslationPlaceholders = true
 [languages.en]
 	title = "JayeX - Cloud Native CI/CD Built On Kubernetes"
 	description = "Documentation, guides and support for JayeX"
-	languageName ="English"
+	label ="English"
 	# Weight used for sorting.
 	weight = 1
 #[languages.zh]
@@ -42,7 +42,7 @@ enableMissingTranslationPlaceholders = true
 #	languageName = "Español"
 #	contentDir = "content/es"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "term"]
 
 ###
 # Configure how URLs look like per section.
@@ -97,7 +97,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [services]
 	[services.googleAnalytics]
 	# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-		id = "UA-4216293-7"
+	#	id = "UA-4216293-7"
 
 ###
 # Everything below this are Site Params
@@ -129,7 +129,7 @@ github_project_repo = "https://github.com/jenkins-x/jx"
 # github_subdir = ""
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "011737558837375720776:fsdu1nryfng"
+# gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
@@ -154,8 +154,8 @@ footer_about_disable = false
 [params.ui.feedback]
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = 'Glad to hear it! Please <a href="https://github.com/jenkins-x/jx-docs/issues/new">tell us how we can improve</a>.'
-no = 'Sorry to hear that. Please <a href="https://github.com/jenkins-x/jx-docs/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/jayex-io/jx-docs/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/jayex-io/jx-docs/issues/new">tell us how we can improve</a>.'
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
@@ -196,3 +196,12 @@ no = 'Sorry to hear that. Please <a href="https://github.com/jenkins-x/jx-docs/i
 	url = "https://kubernetes.slack.com/messages/C9LTHT2BB"
 	icon = "fab fa-slack"
   desc = "Chat with other project developers"
+
+[security]
+  allowContent = [".*"]
+
+[params.search.algolia]
+appId = "HBFM887YU9"
+apiKey = "2eb2e941fddfa95b1df74cf8c2db7b46"
+indexName = "jayex.io"
+

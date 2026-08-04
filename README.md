@@ -85,7 +85,7 @@ npm install
 
 <a id="markdown-running-hugo" name="running-hugo"></a>
 
-The site itself is built with [Hugo](https://gohugo.io/) and configured in [`config.toml`](./config.toml).
+The site itself is built with [Hugo](https://gohugo.io/) and configured in [`hugo.toml`](hugo.toml).
 You have two options to run Hugo, either directly on your machine or via [Docker Compose](https://github.com/docker/compose).
 The following two sections describe the two alternatives in more detail.
 
