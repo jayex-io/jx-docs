@@ -13,6 +13,8 @@ theme = ["github.com/google/docsy/theme"]
 # Will give values to .Lastmod etc.
 enableGitInfo = false
 
+enableEmoji = true
+
 ###
 # Language configuration
 ###
