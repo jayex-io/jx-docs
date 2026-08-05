@@ -11210,8 +11210,11 @@
   color: $gray-600;
 }
 
-.generated .td-page-meta {
-    display: none;
+.generated .td-page-meta__view,
+.generated .td-page-meta__edit,
+.td-page-meta__child,
+.td-page-meta__issue {
+    display: none !important;
 }
 
 .td-navbar {
