@@ -21,8 +21,6 @@ runs:
   - "Created by this action run: https://github.com/jayex-io/jx-docs/actions/runs/${{ inputs.run_id }}"
   - --label
   - updatebot
-  - --label
-  - ok-to-test
   - --push
   - --git-token
   - ${{ inputs.token }}
