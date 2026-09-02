@@ -32,24 +32,18 @@ Jenkins X aids developers in provisioning Kubernetes clusters, automates CI/CD, 
 
 [Jenkins X has two projects for Outreachy applicants](https://www.outreachy.org/apply/project-selection/#jenkins-x) to engage with:
 
-{{< alert >}}
-**Create a Cloud Storage backed Helm repository for Jenkins X, replacing ChartMuseum**
+> [!NOTE] Create a Cloud Storage backed Helm repository for Jenkins X, replacing ChartMuseum
+> 
+> Mentor: [Hardy Ferentschik](https://twitter.com/fere0010)
+> 
+> As part of the Jenkins X workflow, Helm charts are created which need to be deployed and made available. This project would replace [ChartMuseum](https://chartmuseum.com/) with a cloud storage bucket to host and serve Helm charts.
 
-Mentor: [Hardy Ferentschik](https://twitter.com/fere0010)
 
-As part of the Jenkins X workflow, Helm charts are created which need to be deployed and made available. This project would replace [ChartMuseum](https://chartmuseum.com/) with a cloud storage bucket to host and serve Helm charts.
-
-
-{{< /alert >}}
-
-{{< alert >}}
-**Improve the Jenkins X Apps Framework**
-
-Mentor: David Conde
-
-The Jenkins X Apps Framework is a mechanism used to extend the functionality of Jenkins X. The goal of this project is to improve the [Apps Framework User Guide](https://jayex.io/docs/contributing/addons/) and to create a Jenkins X app.
-
-{{< /alert >}}
+> [!NOTE]  Improve the Jenkins X Apps Framework
+> 
+> Mentor: David Conde
+> 
+> The Jenkins X Apps Framework is a mechanism used to extend the functionality of Jenkins X. The goal of this project is to improve the [Apps Framework User Guide](https://jayex.io/docs/contributing/addons/) and to create a Jenkins X app.
 
 ### Ask us questions
 

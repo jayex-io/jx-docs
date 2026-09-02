@@ -31,28 +31,22 @@ To generate the structs and the OpenAPI specification run:
  make generate-openapi
  ```
 
- {{< alert >}}
- `make generate-openapi` is just a wrapper for `codegen openapi`, passing in package to generate from, generate to, and the group (`jenkins.io`) and version (`v1`) to generate for.
- You can run this command directly if you prefer.
- {{< /alert >}}
-
+ > [!NB] `make generate-openapi` is just a wrapper for `codegen openapi`, passing in package to generate from, generate to, and the group (`jenkins.io`) and version (`v1`) to generate for.
+ > You can run this command directly if you prefer.
+ 
  and to generate the HTML run:
 
  ```sh
  make generate-docs
  ```
 
-{{< alert >}}
-`make generate-docs` is just a wrapper for `codegen docs`. You can run this command directly if you prefer.
-{{< /alert >}}
+> [!NB] `make generate-docs` is just a wrapper for `codegen docs`. You can run this command directly if you prefer.
 
 You should run `make generate-openapi` whenever you change the custom resources, and check the generated changes into
  source control. This means that there is always a tagged version of the OpenAPI spec available for others to use.
 
-{{< alert >}}
-You can also run `make generate` which will do all the code generation needed by JayeX (mocks and client as well
-as openapi)
-{{< /alert >}}
+> [!NB] You can also run `make generate` which will do all the code generation needed by JayeX (mocks and client as well
+> as openapi)
 
  `make generate-docs` is run by the release build, and the changes are automatically uploaded to the JayeX
  website on every release. They'll be available a few minutes after the release build completes.

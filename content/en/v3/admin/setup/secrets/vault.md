@@ -30,9 +30,7 @@ jx secret vault wait
 
 ### External vault
 
-{{< alert >}}
-External vault is only supported for jx versions greater than `3.2.203`
-{{< /alert >}}
+> [!NB] External vault is only supported for jx versions greater than `3.2.203`
 
 Configure external vault to support [kubernetes auth method](https://www.vaultproject.io/docs/auth/kubernetes#configuration).
 This step needs to be done before any JayeX related changes are made.

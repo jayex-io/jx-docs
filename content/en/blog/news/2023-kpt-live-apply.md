@@ -28,10 +28,10 @@ apply the manifests, but I couldn't get that to work. Looking for other options 
 
 ## Configuration
 
-{{% alert color="warning" %}}
-For all the functionality described here to work you need to have a cluster that is
-[upgraded](https://jayex.io/v3/admin/setup/upgrades/cluster/) later than January 24th 2023.
-{{% /alert %}}
+> [!WARNING]
+> For all the functionality described here to work you need to have a cluster that is 
+> [upgraded](https://jayex.io/v3/admin/setup/upgrades/cluster/) later than January 24th 2023.
+
 
 You enable the use of `kpt live apply` by adding 
 
