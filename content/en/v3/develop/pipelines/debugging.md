@@ -6,9 +6,8 @@ description: Debugging pipelines in JayeX
 weight: 410
 ---
 
-{{< alert color="warning" >}}
-`TaskRun` breakpoint functionality is no longer supported since Tekton 0.29.0 upgrades in `3.2.298`. For more info see [Kubernetes 1.22 - Breaking change!](/blog/2022/04/22/kubernetes-1.22-tekton/).
-{{< /alert >}}
+> [!WARNING]
+> `TaskRun` breakpoint functionality is no longer supported since Tekton 0.29.0 upgrades in `3.2.298`. For more info see [Kubernetes 1.22 - Breaking change!](/blog/2022/04/22/kubernetes-1.22-tekton/).
 
 Here is a demo which shows how to debug pipelines:
 

@@ -1,7 +1,7 @@
 version: "2"
 services:
   server:
-    image: klakegg/hugo:0.101.0-ext-alpine
+    image: ghcr.io/gohugoio/hugo:v0.164.0
     command:
       ["server", "-s", "/src", "-D", "--bind", "0.0.0.0", "--ignoreCache"]
     volumes:
@@ -15,6 +15,6 @@ services:
       - .:/workdir
   linkchecker:
     image: chabad360/htmlproofer:latest
-    command: 'htmlproofer ./public --allow-hash-href --disable-external --check-html --checks-to-ignore ScriptCheck --empty-alt-ignore --file-ignore /.*apidocs.*/,/.*\/zh.*/,/.*\/es.*/,/.*\/docs\/reference\/api.*/,/.*\/docs\/reference\/config.*/,/.*\/community\/events.*/'
+    command: 'htmlproofer ./public --allow-hash-href --disable-external --check-html --checks-to-ignore ScriptCheck --empty-alt-ignore --file-ignore /.*apidocs.*/,/.*\/docs\/reference\/api.*/,/.*\/docs\/reference\/config.*/,/.*\/community\/events.*/'
     volumes:
       - ./public:/public

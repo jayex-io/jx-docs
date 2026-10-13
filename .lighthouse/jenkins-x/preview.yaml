@@ -24,25 +24,8 @@ spec:
             - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
               name: ""
               resources: {}
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: git-submodules
-              script: |
-                git config --global --add safe.directory /workspace/source
-                git submodule update --init --recursive
 
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: update-content
-              command:
-                - ./scripts/ci/update-content.sh
-
-            - image: gcr.io/cloud-builders/npm
-              name: install-dependencies
-              command:
-                - npm
-              args:
-                - install
-
-            - image: klakegg/hugo:0.101.0-ext-alpine
+            - image: ghcr.io/gohugoio/hugo:v0.164.0
               env:
               - name: HUGO_GH_ACCESS_TOKEN
                 valueFrom:
@@ -50,15 +33,22 @@ spec:
                     key: password
                     name: tekton-git
               name: build-website
+              securityContext:
+                # TODO: make /tekton/home/ writable instead
+                runAsUser: 0
               resources:
                 requests:
                   cpu: 400m
                   memory: 512Mi
               script: |
                 #!/bin/sh
+                set -ex
                 git config --global --add safe.directory /workspace/source
+                git submodule update --init --recursive                
+                ./scripts/ci/update-content.sh
+                hugo mod npm pack
+                npm install
                 hugo -d tmp-website --enableGitInfo --baseURL https://${REPO_NAME}-jx-${REPO_OWNER}-${REPO_NAME}-pr-${PULL_NUMBER}.${DOMAIN}/
-
             - image: ghcr.io/jenkins-x/jx-boot:3.2.197
               name: jx-variables
               resources: {}

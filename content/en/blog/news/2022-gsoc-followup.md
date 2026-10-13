@@ -11,9 +11,7 @@ aliases: []
 author: Ankit D Mohapatra
 ---
 
-{{< alert >}}
-Project proposal template can be found [here](/blog/2022/04/05/gsoc2022-proposal-template/).
-{{< /alert >}}
+> [!NB] Project proposal template can be found [here](/blog/2022/04/05/gsoc2022-proposal-template/).
 
 We are very happy to announce that Jenkins X has been selected to participate in the Google Summer of Code (GSoC) 2022!
 

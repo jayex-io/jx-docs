@@ -11209,3 +11209,47 @@
 .blockquote-footer {
   color: $gray-600;
 }
+
+.generated .td-page-meta__view,
+.generated .td-page-meta__edit,
+.td-page-meta__child,
+.td-page-meta__issue {
+    display: none !important;
+}
+
+.td-navbar {
+   background-color: #eee !important;
+}
+
+a.nav-link.active{
+    color: #000000 !important;
+}
+
+a.nav-link{
+    color: #008cba !important;
+}
+
+[data-bs-theme='dark'] {
+  body,
+  td-sidebar,
+  a.td-sidebar-link__section,
+  a.td-sidebar-link.td-sidebar-link__page,
+  body main * {
+    background: rgb(45, 45, 45);
+    color: #f5f5f5;
+  }
+
+  body a {
+    color: #008cba;
+  }
+
+  section.py-5.bg-light {
+    background-color: rgb(45, 45, 45) !important;
+    color: #f5f5f5;
+  }
+
+  i.fa-paperclip {
+    background-color: #008cba !important;
+    color: #f5f5f5;
+  }
+}

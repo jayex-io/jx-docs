@@ -90,7 +90,7 @@ spec:
     - kind: Preview
       preview:
         applicationURL: https://jx-docs-jx-jenkins-x-jx-docs-pr-3619.infra.jenkins-x.rocks
-        pullRequestURL: https://github.com/jenkins-x/jx-docs/pull/3619
+        pullRequestURL: https://github.com/jayex-io/jx-docs/pull/3619
         startedTimestamp: "2022-07-01T20:33:32Z"
 ```
 

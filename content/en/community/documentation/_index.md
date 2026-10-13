@@ -11,9 +11,7 @@ aliases:
 
 We welcome your contributions to JayeX documentation whether you are a developer, an end user, or someone who can't stand seeing typos!
 
-{{% alert %}}
-If you're looking for the easiest way to correct existing content (typos etc.) have a look at the [Suggest Changes](/community/documentation/changes/) guide.
-{{% /alert %}}
+> [!NB] If you're looking for the easiest way to correct existing content (typos etc.) have a look at the [Suggest Changes](/community/documentation/changes/) guide.
 
 ## Assumptions
 
@@ -24,9 +22,7 @@ Therefore, we only assume the following:
 
 Regardless your experience, there should be enough information in this documentation to get you up and running for contributing.
 
-{{< alert >}}
-If you're struggling at any point in this contribution guide, reach out to the JayeX community in [JayeX's Discussion forum](/community/).
-{{< /alert >}}
+> [!NB] If you're struggling at any point in this contribution guide, reach out to the JayeX community in [JayeX's Discussion forum](/community/).
 
 ## Getting Started
 
@@ -61,11 +57,9 @@ The first thing you'll need to make use of this approach is Docker installed on 
 How to install a Docker engine depends on your platform etc., so best to head over to [Docker](https://docs.docker.com/install/) to find the right one.
 Next, you have install docker compose v2 from the [installation guide](https://docs.docker.com/compose/install/).
 
-To make it as simple as possible, we use the [docker image](https://hub.docker.com/r/klakegg/hugo) recommended in the hugo [documentation](https://gohugo.io/getting-started/installing/#docker), and have setup a [`docker-compose.yml`](https://github.com/jenkins-x/jx-docs/blob/main/docker-compose.yml) file that will help you start up a preview server with a few helpful options.
+To make it as simple as possible, we use the [docker image](https://hub.docker.com/r/klakegg/hugo) recommended in the hugo [documentation](https://gohugo.io/getting-started/installing/#docker), and have setup a [`docker-compose.yml`](https://github.com/jayex-io/jx-docs/blob/main/docker-compose.yml) file that will help you start up a preview server with a few helpful options.
 
-{{< alert >}}
-If you are using a OS that does not support makefiles, look at the [makefile](https://github.com/jenkins-x/jx-docs/blob/main/Makefile) and run the commands manually.
-{{< /alert >}}
+> [!NB] If you are using a OS that does not support makefiles, look at the [makefile](https://github.com/jayex-io/jx-docs/blob/main/Makefile) and run the commands manually.
 
 In order to use this setup, first make sure you're in the folder with your local cloned copy of the `jx-docs` repo, then run the following command to download and start the Hugo server:
 
@@ -85,7 +79,7 @@ You'll know the site is ready when you see something like:
 
 ```sh
 server_1        | Watching for changes in /src/{assets,content,layouts,static,themes}
-server_1        | Watching for config changes in /src/config.toml, /src/themes/docsy/config.toml
+server_1        | Watching for config changes in /src/hugo.toml, /src/themes/docsy/hugo.toml
 server_1        | Environment: "development"
 server_1        | Serving pages from memory
 server_1        | Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
@@ -107,7 +101,7 @@ make compose-restart
 make compose-stop
 ```
 
-You can see what these make targets do in the jx-docs [makefile](https://github.com/jenkins-x/jx-docs/blob/main/Makefile).
+You can see what these make targets do in the jx-docs [makefile](https://github.com/jayex-io/jx-docs/blob/main/Makefile).
 
 ### Local Hugo install method
 

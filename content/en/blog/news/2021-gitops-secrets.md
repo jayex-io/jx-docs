@@ -61,7 +61,7 @@ Jenkins X 3.x uses [Kubernetes External Secrets](https://github.com/external-sec
 * Hashicorp Vault
 * GCP Secret Manager
 
-{{<mermaid>}}
+```mermaid
 graph TB
     subgraph A[Kubernetes Cluster]
         sqB[External Secrets Controller]
@@ -80,7 +80,7 @@ graph TB
         end
         sqB -- Upsert Secrets --> sqES
     end
-{{</mermaid>}}
+```
 
 You can then keep all your secrets inside your cloud native secret store which also allows:
 

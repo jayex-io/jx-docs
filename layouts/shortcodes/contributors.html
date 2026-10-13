@@ -1,6 +1,18 @@
-{{ $urlPre := "https://api.github.com" }}
-{{ $contributors := getJSON $urlPre "/repos/jenkins-x/jx/stats/contributors" (dict "Authorization" (printf "Bearer %s" (os.Getenv "HUGO_GH_ACCESS_TOKEN"))) }}
-{{ $sortedContributors := sort $contributors "total" "desc" }}
+{{ $urlPre := "https://api.github.com/repos/jenkins-x/jx/stats/contributors" }}
+{{ $sortedContributors := slice }}
+{{ with try (resources.GetRemote
+     $urlPre
+     (dict "headers" (dict "Authorization" (printf "Bearer %s" (os.Getenv "HUGO_GH_ACCESS_TOKEN"))))) }}
+  {{ with .Err }}
+    {{ warnf "%s" . }}
+  {{ else with .Value }}
+    {{ $contributors := . | transform.Unmarshal }}}}
+    {{ $sortedContributors = sort $contributors "total" "desc" }}
+  {{ else }}
+    {{ warnf "Unable to get remote resource %q" $urlPre }}
+  {{ end }}
+{{ end }}
+
 {{ $count := 0 }}
 
   <table>

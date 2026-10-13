@@ -20,13 +20,12 @@ To upgrade jx subcommand plugins run:
 jx upgrade plugins
 ```
 
-{{< alert >}}
-If you encounter this error:
-```
-ERROR: failed to load plugin <plugin-name>: can't find latest version of plugin: {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/repos#get-the-latest-release"}
-```
-Then most probably it's an old plugin which is not maintained, and can be removed from `~/.jx3/plugins/bin` folder.
-{{< /alert >}}
+> [!NOTE]
+> If you encounter this error:
+> ```
+> ERROR: failed to load plugin <plugin-name>: can't find latest version of plugin: {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/repos#get-the-latest-release"}
+> ```
+> Then most probably it's an old plugin which is not maintained, and can be removed from `~/.jx3/plugins/bin` folder.
 
 The `jx` CLI version used to upgrade to is derived from the JayeX [version stream](/v3/about/concepts/version-stream/).  
 
