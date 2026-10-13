@@ -12,12 +12,12 @@ This page lists the main organisations and repositories.
 
 ## Organisations
 
-* [jenkins-x](https://github.com/jenkins-x) the main organisation for source code
+* [jayex-io](https://github.com/jayex-io) the main organisation for the source code
+* [jenkins-x](https://github.com/jenkins-x) formerly the main organisation for source code
 * [jenkins-x-plugins](https://github.com/jenkins-x-plugins) contains plugins to JayeX 3.x. See the [extension guide](https://jayex.io/v3/about/extending/#plugins) for details
 * [jenkins-x-charts](https://github.com/jenkins-x-charts) the main helm charts we distribute
 * [jenkins-x-images](https://github.com/jenkins-x-images) contains some custom docker image builds
 * [jenkins-x-quickstarts](https://github.com/jenkins-x-quickstarts) the quickstart projects used by [create quickstart](/v3/develop/create-project/)
-* [jenkins-x-test-projects](https://github.com/jenkins-x-test-projects) test projects we use in test cases 
 * [jx3-gitops-repositories](https://github.com/jx3-gitops-repositories) the quickstart repositories for [creating new infrastructure and installations](/v3/admin/) on different cloud providers
 
 ## Repositories
@@ -25,13 +25,13 @@ This page lists the main organisations and repositories.
 Here we'll call out of some of the main repositories in the above organisations:
 
 * [jenkins-x/jx](https://github.com/jenkins-x/jx) is the 3.x CLI 
-* [jenkins-x/jx3-pipeline-catalog](https://github.com/jenkins-x/jx3-pipeline-catalog) the main [Pipeline Catalog](https://jayex.io/v3/guides/pipeline-catalog/)
+* [jenkins-x/jx3-pipeline-catalog](https://github.com/jenkins-x/jx3-pipeline-catalog) the main [Pipeline Catalog](/v3/guides/pipeline-catalog/)
 * [jenkins-x/jx3-versions](https://github.com/jenkins-x/jx3-versions) contains the [version stream](/v3/about/concepts/version-stream/) - the stable versions of all _charts_ and CLI _packages_
 
 Additional repositories:
 
-* [jenkins-x/jx-docs](https://github.com/jenkins-x/jx-docs) the Hugo based documentation which generates this website
-* [jenkins-x/bdd-jx3](https://github.com/jenkins-x/bdd-jx3) the BDD tests we use to verify the platform changes and verify PRs on [jenkins-x/jx](https://github.com/jenkins-x/jx)
+* [jayex-io/jx-docs](https://github.com/jayex-io/jx-docs) the Hugo based documentation which generates this website
+* [jenkins-x/bdd-jx3](https://github.com/jenkins-x/bdd-jx3) the BDD tests we use to verify the platform changes ie PRs on [jenkins-x/jx3-versions](https://github.com/jenkins-x/jx3-versions)
 
 ### Tools
 
