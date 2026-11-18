@@ -3,6 +3,9 @@ title: jx
 linktitle: jx
 type: docs
 description: Command Line Interface reference
+cascade:
+  params:
+    body_class: generated
 weight: 490
 ---
 

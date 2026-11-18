@@ -6,9 +6,8 @@ description: desktop JayeX Console based on Lens
 weight: 50
 ---
     
-{{< alert color="warning" >}}
-Lens v6 or higher is not supported.
-{{< /alert >}}
+> [!WARNING]
+> Lens v6 or higher is not supported.
 
 [Lens](https://k8slens.dev/) is a desktop console for Kubernetes which runs locally on your laptop as a desktop application.
 

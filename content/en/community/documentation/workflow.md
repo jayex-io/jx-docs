@@ -134,14 +134,13 @@ Sometimes it may take a few days for a review to happen. If you feel it's an urg
 
 Once the review is done, your changes will be merged into the master branch, and the site will be updated.
 
-{{< alert >}}
-In case you need to update your PR/branch because js-docs/master have been updated since you submitted your PR, run the followin `git` command to pull all the changes to your local environment and then push them to your PR/branch:
-
-```sh
-git fetch upstream
-git rebase upstream/master
-git push
-```
-
-If you experience Merge Conflicts, there's a good [article on GitHub](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line) that helps explain what to do
-{{< /alert >}}
+> [!NOTE]
+> In case you need to update your PR/branch because js-docs/master have been updated since you submitted your PR, run the followin `git` command to pull all the changes to your local environment and then push them to your PR/branch:
+> 
+> ```sh
+> git fetch upstream
+> git rebase upstream/master
+> git push
+> ```
+> 
+> If you experience Merge Conflicts, there's a good [article on GitHub](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line) that helps explain what to do

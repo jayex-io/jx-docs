@@ -67,14 +67,12 @@ git clone --recurse-submodules --depth 1 git@github.com:<YOUR_USERNAME>/jx-docs.
 cd jx-docs
 ```
 
-{{< alert >}}
-In case you already have a git clone locally (from before the theme change) then run the following to pull the Docsy theme and dependencies
-
-```sh
-git submodule update --init --recursive
-```
-
-{{< /alert >}}
+> [!NOTE]
+> In case you already have a git clone locally (from before the theme change) then run the following to pull the Docsy theme and dependencies
+>
+> ```sh
+> git submodule update --init --recursive
+> ```
 
 Add the conventional upstream `git` remote in order to fetch changes from the `jx-docs` master
 branch and to create pull requests:

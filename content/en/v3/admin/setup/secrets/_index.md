@@ -22,7 +22,7 @@ This lets you check in all of your other kubernetes resources and custom resourc
 You can then rotate secrets easily independent of git.
 
 This is the exact same graph as [here](https://github.com/external-secrets/kubernetes-external-secrets#system-architecture), with AWS Secrets Manager replaced by vault.
-{{<mermaid>}}
+```mermaid
 graph TB
     subgraph A[Kubernetes Cluster]
         sqB[External Secrets Controller]
@@ -41,7 +41,7 @@ graph TB
         end
         sqB -- Upsert Secrets --> sqES
     end
-{{</mermaid>}}
+```
     
 
 ## Demo

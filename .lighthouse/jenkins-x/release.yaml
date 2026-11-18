@@ -31,61 +31,30 @@ spec:
             - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone.yaml@versionStream
               name: ""
               resources: {}
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: git-clone-website
-              command:
-                - git
-              args:
-                - clone
-                - https://github.com/jayex-io/website.git
-                - --depth=20
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: git-submodules
-              command:
-                - git
-              args:
-                - submodule
-                - update
-                - --init
-                - --recursive
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: update-content
-              command:
-                - ./scripts/ci/update-content.sh
-            - image: gcr.io/cloud-builders/npm
-              name: install-dependencies
-              command:
-                - npm
-              args:
-                - install
-            ## delete everything in the website repo clone
-            - image: klakegg/hugo:0.101.0-ext-alpine
-              name: remove-old
-              command:
-                - git
-              args:
-                - -C
-                - website
-                - rm
-                - -r
-                - "*"
-            ## build the site into the cloned folder
-            - image: klakegg/hugo:0.101.0-ext-alpine
+            - image: ghcr.io/gohugoio/hugo:v0.164.0
               name: build-website
+              securityContext:
+                # TODO: make /tekton/home/ writable instead
+                runAsUser: 0
               env:
               - name: HUGO_GH_ACCESS_TOKEN
                 valueFrom:
                   secretKeyRef:
                     key: password
                     name: tekton-git
-              command:
-                - hugo
-              args:
-                - -d
-                - website
-                - --enableGitInfo
-                - --baseURL
-                - https://jayex.io
+              script: |
+                #!/bin/sh
+                set -ex
+                git config --global --add safe.directory /workspace/source
+                git submodule update --init --recursive
+                ./scripts/ci/update-content.sh
+                hugo mod npm pack
+                npm install
+                git clone https://github.com/jayex-io/website.git --depth=20
+                # delete everything in the website repo clone
+                git -C website rm -r "*"
+                # build the site into the cloned folder
+                hugo -d website --enableGitInfo --baseURL https://${REPO_NAME}-jx-${REPO_OWNER}-${REPO_NAME}-pr-${PULL_NUMBER}.${DOMAIN}/
               resources:
                 requests:
                   cpu: 400m
